@@ -1,0 +1,205 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #f8fafc;
+  color: #0f172a;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Custom Scrollbar - Light Theme */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Light Glassmorphism & Soft Cards */
+.light-panel {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05);
+}
+
+.light-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.04), 0 1px 2px 0 rgba(0, 0, 0, 0.02);
+}
+
+.light-card-hover {
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.light-card-hover:hover {
+  border-color: #c7d2fe;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px -5px rgba(79, 70, 229, 0.1);
+}
+
+/* Recharts Custom Tooltip - Light Theme */
+.recharts-default-tooltip {
+  background-color: #ffffff !important;
+  border: 1px solid #e2e8f0 !important;
+  border-radius: 12px !important;
+  color: #0f172a !important;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1) !important;
+  padding: 10px 14px !important;
+}
+
+.code-font {
+  font-family: var(--font-mono);
+}
+
+/* ==========================================================================
+   Light Theme Contrast Rules
+   ========================================================================== */
+html:not(.dark) body,
+html:not(.dark) .markdown-content,
+html:not(.dark) .markdown-content p,
+html:not(.dark) .markdown-content li,
+html:not(.dark) .markdown-content td,
+html:not(.dark) .markdown-content th,
+html:not(.dark) .markdown-content h1,
+html:not(.dark) .markdown-content h2,
+html:not(.dark) .markdown-content h4,
+html:not(.dark) .markdown-content span,
+html:not(.dark) .markdown-content strong,
+html:not(.dark) .markdown-content em {
+  color: #0f172a;
+}
+
+html:not(.dark) .bg-white {
+  background-color: #ffffff;
+  color: #0f172a;
+}
+
+html:not(.dark) .bg-slate-50,
+html:not(.dark) .bg-slate-50\/60,
+html:not(.dark) .bg-slate-50\/50,
+html:not(.dark) .bg-slate-50\/70 {
+  color: #0f172a;
+}
+
+/* ==========================================================================
+   Dark Theme Rules & Overrides
+   ========================================================================== */
+html.dark,
+html.dark body {
+  background-color: #0b0f19 !important;
+  color: #f1f5f9 !important;
+}
+
+html.dark ::-webkit-scrollbar-track {
+  background: #0f172a !important;
+}
+
+html.dark ::-webkit-scrollbar-thumb {
+  background: #334155 !important;
+}
+
+html.dark ::-webkit-scrollbar-thumb:hover {
+  background: #475569 !important;
+}
+
+html.dark aside,
+html.dark header,
+html.dark .bg-white {
+  background-color: #111827 !important;
+  color: #f3f4f6 !important;
+  border-color: #1f2937 !important;
+}
+
+html.dark .bg-slate-50,
+html.dark .bg-slate-50\/60,
+html.dark .bg-slate-50\/50,
+html.dark .bg-slate-50\/70 {
+  background-color: #0b0f19 !important;
+  color: #f3f4f6 !important;
+}
+
+html.dark .bg-slate-100 {
+  background-color: #1f2937 !important;
+  color: #f3f4f6 !important;
+  border-color: #374151 !important;
+}
+
+html.dark .bg-slate-200 {
+  background-color: #374151 !important;
+  color: #f3f4f6 !important;
+}
+
+html.dark .text-slate-800,
+html.dark .text-slate-900,
+html.dark .text-slate-700,
+html.dark .text-slate-600 {
+  color: #f3f4f6 !important;
+}
+
+html.dark .text-slate-500,
+html.dark .text-slate-400 {
+  color: #9ca3af !important;
+}
+
+html.dark .border-slate-100,
+html.dark .border-slate-200,
+html.dark .border-slate-200\/80,
+html.dark .border-slate-200\/90 {
+  border-color: #1f2937 !important;
+}
+
+html.dark .bg-indigo-50,
+html.dark .bg-indigo-50\/80,
+html.dark .bg-indigo-50\/70,
+html.dark .bg-indigo-50\/60,
+html.dark .bg-indigo-50\/50 {
+  background-color: #1e1b4b !important;
+  border-color: #312e81 !important;
+  color: #e0e7ff !important;
+}
+
+html.dark .text-indigo-900,
+html.dark .text-indigo-800,
+html.dark .text-indigo-700 {
+  color: #c7d2fe !important;
+}
+
+html.dark input[type="text"] {
+  background-color: #111827 !important;
+  color: #f9fafb !important;
+  border-color: #374151 !important;
+}
+
+html.dark input[type="text"]::placeholder {
+  color: #6b7280 !important;
+}
+
+html.dark .recharts-default-tooltip {
+  background-color: #1f2937 !important;
+  border: 1px solid #374151 !important;
+  color: #f9fafb !important;
+}
+
+html.dark svg text {
+  fill: #9ca3af !important;
+}
+
